@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SHM Demo</title>
+    <style>
+        *{ padding: 0; margin: 0;}
+        canvas{background: #eee; display: block; margin: 0 auto;}
+    </style>
+</head>
+<body onresize="demo.update()">
+    <h1 align="center">Simple Harmonic Motion Demo</h1>
+    <canvas id="canvas" style="border: 0px solid black">
+        Your browser does not support the HTML5 canvas tag.
+    </canvas>
+    <div style="text-align:center;" onresize="demo.update()">
+        Oscillator Amplitude:<input type="text" id="oscillatorAmplitude" value="100" /> &emsp;
+        Spinner Amplitude:<input type="text" id="spinnerAmplitude" value="100" />
+    </div>
+    <div style="text-align: center;">
+        Spring Constant k:<input type="text" id="oscillatorOmega" value="100"/> &emsp;
+        Spinner Angular Velocity Constant:<input type="text" id="spinnerOmega" value="100" />
+    </div>
+    <div style="text-align: center;">
+        <input type="button" value="Update" id="updateButton" onclick="demo.update()">
+    </div>
+    <script src="SHM.js"></script>
+</body>
+</html>
