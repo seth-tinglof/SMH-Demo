@@ -28,8 +28,6 @@ function SHMDemo() {
          * (under ~.025) to keep the simulation accurate.
          */
         this.move = function (frameLength) {
-            if(frameLength > .025)
-                frameLength = .025;          //Prevents low framerate from breaking the simulation's accuracy
             this.x += this.dx * frameLength;
             this.y += this.dy * frameLength;
         };
